@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portföy, cüzdan, doğrulama ve market akışları için güvenli kullanıcı paneli." />
+  <title>ProTrade 360 | Kullanıcı Paneli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="badge">ProTrade 360</span>
+        <span>Güvenli Kullanıcı Paneli</span>
+      </div>
+      <div class="flex">
+        <span class="status warn" data-verify>Doğrulama Bekliyor</span>
+        <button class="chip-btn" data-logout>Çıkış</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero glow">
+      <div>
+        <div class="badge">Cüzdan</div>
+        <h1>Bakiyeniz: <span class="highlight" data-wallet>0₺</span></h1>
+        <p>Yükleme ve çekme isteklerinizi oluşturun; admin onayı sonrası kısmi ya da tam tutar anında yansır.</p>
+        <div class="grid-2">
+          <form class="form" data-deposit>
+            <label>Tutar (₺)
+              <input name="amount" type="number" min="10" step="10" required />
+            </label>
+            <button class="btn" type="submit">Bakiye Yükle</button>
+          </form>
+          <form class="form" data-withdraw>
+            <label>Tutar (₺)
+              <input name="amount" type="number" min="10" step="10" required />
+            </label>
+            <button class="btn" type="submit">Para Çek</button>
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="action-row">
+          <h3>Portföyüm</h3>
+          <span class="pill">Tüm yatırımlar</span>
+        </div>
+        <div class="ticker" data-portfolio></div>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Kimlik Doğrulama</h2>
+      <span class="pill">Arkalı önlü</span>
+    </div>
+    <section class="card">
+      <form class="form" data-kyc>
+        <div class="grid-2">
+          <label>Ön Yüz Fotoğrafı
+            <input type="file" accept="image/*" required />
+          </label>
+          <label>Arka Yüz Fotoğrafı
+            <input type="file" accept="image/*" required />
+          </label>
+        </div>
+        <button class="btn" type="submit">Fotoğrafları Gönder</button>
+      </form>
+      <p class="banner">Admin paneli onayı sonrası doğrulanmış kullanıcı olarak 5×200 varlıkta işlem açabilirsiniz.</p>
+    </section>
+
+    <div class="section-title">
+      <h2>Canlı Marketler</h2>
+      <span class="pill">TradingView destekli</span>
+    </div>
+    <div class="cards-3" data-markets></div>
+
+    <div class="section-title">
+      <h2>Ekonomi Haberleri</h2>
+      <span class="pill">Anlık güncellenir</span>
+    </div>
+    <div class="card-grid" data-news></div>
+  </main>
+
+  <footer>
+    <div class="flex" style="justify-content:center; gap:16px;">
+      <span class="badge-outline">Portföyüm & Cüzdanım</span>
+      <span class="badge-outline">Token ile korunan erişim</span>
+      <span class="badge-outline">Doğrulama sonrası işlem</span>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

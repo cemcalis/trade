@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kurumsal broker altyapısına sahip, animasyonlu ve SEO dostu yatırım platformu." />
+  <title>ProTrade 360 | Kurumsal Broker ve Gelişmiş UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="badge">ProTrade 360</span>
+        <span>Ultra Broker Omnichannel</span>
+      </div>
+      <div class="flex">
+        <a class="chip-btn" href="admin.html">Admin Paneli</a>
+        <a class="chip-btn" href="user.html">Kullanıcı Paneli</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero glow">
+      <div>
+        <div class="badge">Pro seviye UI & UX</div>
+        <h1>Token korumalı, animasyonlu ve kurumsal düzeyde broker deneyimi.</h1>
+        <p>TC kimlik numarasıyla kayıt, dinamik doğrulama akışları, TradingView verileri ve üst düzey admin kontrolleri tek çatı altında.</p>
+        <div class="flex">
+          <a class="btn" href="#register">Kayıt Ol</a>
+          <a class="btn" href="#login">Giriş Yap</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="action-row">
+          <h3>Gerçek Zamanlı Marketler</h3>
+          <span class="pill">5×200 en popüler</span>
+        </div>
+        <p>TradingView entegrasyonuna hazır canlı akış: kripto, BIST, forex, emtia ve global hisseler.</p>
+        <div data-marquee></div>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Güncel Haberler & Analizler</h2>
+      <span class="pill">Her gün yenilenir</span>
+    </div>
+    <div class="card-grid" data-news></div>
+
+    <div class="section-title" id="register">
+      <h2>Kayıt Ol</h2>
+      <span class="pill">TC + Şifre</span>
+    </div>
+    <section class="card">
+      <form class="form" data-register>
+        <div class="grid-2">
+          <label>Ad Soyad
+            <input name="name" required placeholder="Adınız Soyadınız" />
+          </label>
+          <label>E-Posta
+            <input name="email" type="email" required placeholder="ornek@mail.com" />
+          </label>
+        </div>
+        <div class="grid-2">
+          <label>TC Kimlik Numarası
+            <input name="tc" maxlength="11" minlength="11" required placeholder="11 hane" />
+          </label>
+          <label>Şifre
+            <input name="password" type="password" required placeholder="Güçlü şifre" />
+          </label>
+        </div>
+        <button class="btn" type="submit">Hesap Oluştur</button>
+      </form>
+      <p class="banner">Kayıt sonrası giriş yaparak token tabanlı oturum başlatılır. KYC yüklemesi yapılmadan işlem yetkisi verilmez.</p>
+    </section>
+
+    <div class="section-title" id="login">
+      <h2>Giriş Yap</h2>
+      <span class="pill">Token korumalı</span>
+    </div>
+    <section class="card">
+      <form class="form" data-login>
+        <div class="grid-2">
+          <label>TC Kimlik Numarası
+            <input name="tc" maxlength="11" minlength="11" required />
+          </label>
+          <label>Şifre
+            <input name="password" type="password" required />
+          </label>
+        </div>
+        <button class="btn" type="submit">Giriş Yap ve Token Al</button>
+      </form>
+    </section>
+
+    <div class="section-title">
+      <h2>Broker & Admin Ayrıcalıkları</h2>
+      <span class="pill">Tam kontrol</span>
+    </div>
+    <div class="cta-grid">
+      <div class="card">
+        <h3>Admin Paneli</h3>
+        <p>Piyasa akışını tek tek, segment bazlı veya toplu olarak durdur, zaman aşımı uygula ya da fiyatları yeniden tanımla.</p>
+        <div class="progress"><span style="width: 70%"></span></div>
+      </div>
+      <div class="card">
+        <h3>Broker Otomasyonları</h3>
+        <p>Alt kullanıcılara toplu al-sat emirleri ver, admin gözetiminde onaya gönder ve işlemleri kayıt altına al.</p>
+        <div class="progress"><span style="width: 50%"></span></div>
+      </div>
+      <div class="card">
+        <h3>Ödeme Akışı</h3>
+        <p>Yatırma/çekme taleplerini dinamik onay mekanizmasıyla yönet; istenen tutarı kısmi onayla kullanıcı cüzdanına yansıt.</p>
+        <div class="progress"><span style="width: 80%"></span></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="flex" style="justify-content:center; gap:16px;">
+      <span class="badge-outline">SEO optimize title & meta</span>
+      <span class="badge-outline">Her sayfa ayrı başlık</span>
+      <span class="badge-outline">Animasyonlu UI</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

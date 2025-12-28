@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adminler için broker, kullanıcı ve market yönetimi araçları." />
+  <title>ProTrade 360 | Admin Paneli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="badge">ProTrade 360</span>
+        <span>Admin Kontrol Merkezi</span>
+      </div>
+      <div class="flex">
+        <span class="badge-outline">Broker & Kullanıcı Yönetimi</span>
+        <button class="chip-btn" data-logout>Çıkış</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero glow">
+      <div>
+        <div class="badge">Market Akış Kontrolü</div>
+        <h1>Gerçek zamanlı TradingView akışlarını yönet.</h1>
+        <p>200 kripto + 200 BIST + 200 Forex + 200 emtia + 200 global hisse: tek tek, segment bazlı ya da toplu durdurma ve fiyat güncellemeleri.</p>
+        <div class="grid-2" data-feed>
+          <button class="btn" data-feed-toggle="tek">Tek tek durdur</button>
+          <button class="btn" data-feed-toggle="segment">Market bazlı</button>
+          <button class="btn" data-feed-toggle="tum">Tümü</button>
+        </div>
+        <p class="banner">Demo giriş: TC 00000000000 / Şifre: admin</p>
+      </div>
+      <div class="card">
+        <div class="action-row">
+          <h3>Broker Komutları</h3>
+          <span class="pill">Admin onaylı</span>
+        </div>
+        <ul class="timeline">
+          <li>Alt kullanıcılarına toplu alım emri gönder.</li>
+          <li>Onay sürecinde emirleri gözden geçir.</li>
+          <li>Fiyat ve zaman aşımı parametrelerini yeniden hesapla.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Kullanıcı Doğrulama</h2>
+      <span class="pill">KYC onay</span>
+    </div>
+    <section class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>TC</th>
+            <th>Ad Soyad</th>
+            <th>E-Posta</th>
+            <th>Kimlik</th>
+            <th>İşlem</th>
+          </tr>
+        </thead>
+        <tbody data-admin-users></tbody>
+      </table>
+    </section>
+
+    <div class="section-title">
+      <h2>Ödeme Müdahalesi</h2>
+      <span class="pill">Kısmi onay</span>
+    </div>
+    <section class="card">
+      <div class="grid-2">
+        <div>
+          <h3>Yükleme</h3>
+          <p>İstenen tutarın tamamını veya belirlediğiniz kısmı cüzdana yansıtın.</p>
+        </div>
+        <div>
+          <h3>Çekme</h3>
+          <p>Çekim taleplerini inceleyip onaylayın veya tutarı düzenleyin.</p>
+        </div>
+      </div>
+      <p class="banner">Bu demo arayüzü, gerçek zamanlı onay mekanizmasını görselleştirmek için tasarlanmıştır.</p>
+      <form class="form" data-wallet-admin>
+        <div class="grid-2">
+          <label>Kullanıcı TC
+            <input name="tc" maxlength="11" minlength="11" required />
+          </label>
+          <label>Yansıtılacak Tutar (₺)
+            <input name="amount" type="number" step="10" required />
+          </label>
+        </div>
+        <button class="btn" type="submit">Cüzdanı Güncelle</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="flex" style="justify-content:center; gap:16px;">
+      <span class="badge-outline">Admin Token Gerekli</span>
+      <span class="badge-outline">Broker yönetimi</span>
+      <span class="badge-outline">SEO optimize meta</span>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
