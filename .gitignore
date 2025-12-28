@@ -1,0 +1,8 @@
+﻿node_modules/
+frontend/.next/
+backend/dist/
+backend/node_modules/
+backend/trade-*.json
+*.log
+.env
+.env.local
